@@ -40,3 +40,14 @@ function cmp(section1, section2) {
 }
 
 // or
+
+function cmp(section1,section2) {
+  let arr1 = section1.split`.`, arr2 = section2.split`.`
+  for (let i = 0; i < Math.max(arr1.length,arr2.length); i++){
+    if (!arr1[i] && +arr2[i] > 0) return -1
+    if (!arr2[i]  && +arr1[i] > 0) return 1
+    if (+arr1[i] < +arr2[i]) return -1
+    if (+arr1[i] > +arr2[i]) return 1
+  }
+  return 0
+}
