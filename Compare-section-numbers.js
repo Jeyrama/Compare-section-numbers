@@ -20,3 +20,21 @@ on whether section1 is before, same as, or after section2 respectively.
 
 
 // Solution
+
+function cmp(section1, section2) {
+  let sections1 = section1.split(".").map(val => Number(val));
+  let sections2 = section2.split(".").map(val => Number(val));
+
+  const sectionsCount = Math.max(sections1.length, sections2.length);
+
+  for (let i = 0; i < sectionsCount; i++) {
+    let s1 = sections1[i] || 0;
+    let s2 = sections2[i] || 0;
+    if (s1 > s2) {
+      return 1;
+    } else if (s2 > s1) {
+      return -1;
+    }
+  }
+  return 0;
+}
