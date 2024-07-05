@@ -38,3 +38,5 @@ function cmp(section1, section2) {
   }
   return 0;
 }
+
+// or
