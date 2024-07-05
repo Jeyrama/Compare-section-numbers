@@ -17,3 +17,6 @@ Thus, section 1.0 is the same as section 1, and section 1.2.0.0 is the same as s
 Write a function cmp(section1, section2) that returns -1, 0, or 1 depending 
 on whether section1 is before, same as, or after section2 respectively.
 */
+
+
+// Solution
